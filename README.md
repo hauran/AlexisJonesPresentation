@@ -1,6 +1,6 @@
 # Alexis Jones Presentation #
 
- ## Set up ##
+## Set Up ##
  ```
  npm install
 
