@@ -11,7 +11,7 @@ class Main extends React.Component {
     this.state = {
       index:0,
       conv:[],
-      start:8
+      start:0
     }
   }
 
