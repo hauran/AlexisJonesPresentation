@@ -1,0 +1,102 @@
+@import "./mixins.less";
+@import "./typing.less";
+
+.chat {
+  width:100%;
+  color:white;
+  &.aj {
+    .talk-bubble {
+      background-color: #7f8c8d;
+    }
+    .tri-right.btm-left:after{
+      border-color: transparent transparent transparent #7f8c8d;
+    }
+  }
+  &.me {
+    text-align: right;
+    .talk-bubble {
+      background-color: #3498db;
+    }
+    .tri-right.btm-right:after{
+        border-color: #3498db #3498db transparent transparent;
+    }
+  }
+
+  .talk-bubble {
+    margin:40px;
+    display: inline-block;
+    position: relative;
+    max-width: 70%;
+  	height: auto;
+
+  }
+  .round{
+    border-radius: 30px;
+  }
+
+  .tri-right.btm-left:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0px;
+    right: auto;
+    top: auto;
+    bottom: -20px;
+    border: 22px solid;
+  }
+
+  .tri-right.btm-right:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: 0px;
+    bottom: -20px;
+    border: 12px solid;
+  }
+
+  .talktext{
+    padding: 1em;
+  	text-align: left;
+    line-height: 1.5em;
+  }
+
+  .avatar {
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    border:1px solid rgba(0,0,0,0.1);
+    position: absolute;
+    .flex;
+    & > div {
+      width: 35px;
+      height: 35px;
+      background-position: center center;
+      background-size:cover;
+      background-repeat: no-repeat;
+    }
+    &.aj{
+      bottom:-60px;
+      div {
+        background-image: url(/img/bot.png);
+      }
+    }
+    &.me{
+      bottom:-60px;
+      right:0px;
+      div {
+        background-image: url(/img/me.png);
+      }
+    }
+  }
+
+  .img {
+    margin:15px 0;
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
