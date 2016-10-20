@@ -23,7 +23,7 @@ module.exports = [
   },
   {
     aj:true,
-    __html:'I\'m pretty good. So far I have over <b>1800 TPVs</b>. Not too shabby, eh?. But still lots of work to be done. Here\'s the breakdown:',
+    __html:'I\'m pretty good. So far I have over <b>1800 TPVs</b> since March, slowly rolled out. Not too shabby, eh?. But still lots of work to be done. Here\'s the breakdown:',
     link:'http://jobs.glgresearch.com/simulacrum-stats/#/overview'
   },
   {
