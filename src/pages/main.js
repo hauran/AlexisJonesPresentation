@@ -61,6 +61,8 @@ class Main extends React.Component {
       <div id='main' className='page'>
         <ul>
         {this.state.conv.map((c,i) => {
+          if(!c.link)
+            c.link = []
           return (
             <li key={i}>
               <Chat chat={c}></Chat>

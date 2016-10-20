@@ -71,10 +71,11 @@ class Chat extends React.Component {
                     null
                 }
                 {
-                  this.props.chat.link ?
-                    <a href={this.props.chat.link} target='_blank'>{this.props.chat.link}</a>
-                  :
-                    null
+                  this.props.chat.link.map((l) => {
+                    return (
+                      <div><a href={l} target='_blank'>{l}</a></div>
+                    )
+                  })
                 }
               </div>
               <div className={avatar}>
