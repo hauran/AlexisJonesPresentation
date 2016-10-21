@@ -19,6 +19,7 @@
     "smoothscroll": "^0.2.2",
     "whatwg-fetch": "1.0.0"
   },
+  "homepage":"./",
   "scripts": {
     "dev": "react-scripts start",
     "build": "react-scripts build",
