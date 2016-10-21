@@ -31,13 +31,16 @@ class Chat extends React.Component {
     let chatStyle = {}
     let avatar = {}
     let img = {}
+    let chatImage = {}
     if(this.props.chat.aj) {
       chatPerson = classNames('chat', 'aj')
+      chatImage = {backgroundImage:'url(img/bot.png)'}
       chatStyle = classNames('talk-bubble', 'tri-right', 'btm-left')
       avatar = classNames('avatar', 'aj')
     }
     else {
       chatPerson = classNames('chat', 'me')
+      chatImage = {backgroundImage:'url(img/me.png)'}
       chatStyle = classNames('talk-bubble', 'tri-right', 'btm-right')
       avatar = classNames('avatar', 'me')
     }
@@ -79,7 +82,7 @@ class Chat extends React.Component {
                 }
               </div>
               <div className={avatar}>
-                <div></div>
+                <div style={chatImage}></div>
               </div>
             </div>
         }
