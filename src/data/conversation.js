@@ -31,7 +31,7 @@ module.exports = [
   {
     aj:true,
     text:'Obvi.  Here\'s a nice chart with data stuff.',
-    img: 'img/funnel.png',
+    img: 'https://jobs.glgresearch.com/aj-presentation/img/funnel.png',
     link:['https://jobs.glgresearch.com/simulacrum-stats/#/conversion_funnel']
   },
   {
@@ -40,7 +40,7 @@ module.exports = [
   {
     aj:true,
     text:'Glad you asked.  I\'m more then just an email.  I\'m also in Streamliner, recommending even more CMs.  But this is currently only in beta for PSF Americas.',
-    img: 'img/recommender.png',
+    img: 'https://jobs.glgresearch.com/aj-presentation/img/recommender.png',
     link:['https://services.glgresearch.com/streamliner/#/consultation/2285749']
   },
   {
@@ -49,7 +49,7 @@ module.exports = [
   {
     aj:true,
     text:'Too early to tell.  It\'s only been open for a couple of months, so there haven\'t been too many conversions yet, about 70 so far. But we\'re hoping to open it up to a wider audience soon. Here are some recent stats.',
-    img: 'img/funnel-ui.png',
+    img: 'https://jobs.glgresearch.com/aj-presentation/img/funnel-ui.png',
     link:['https://jobs.glgresearch.com/simulacrum-stats/#/streamliner_ui']
   },
   {
@@ -58,7 +58,7 @@ module.exports = [
   {
     aj:true,
     text:'We got a few of algorithms we are testing out. cohorts v0.0.2, cohorts v0.1.0, and hyperscience. We\'re tracking the progress to see which one has the best results.',
-    img: 'img/algo.png',
+    img: 'https://jobs.glgresearch.com/aj-presentation/img/algo.png',
     link:['https://jobs.glgresearch.com/simulacrum-stats/#/algo', 'https://github.com/glg/cohorts']
   },
   {
