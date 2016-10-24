@@ -74,9 +74,9 @@ class Chat extends React.Component {
                     null
                 }
                 {
-                  this.props.chat.link.map((l) => {
+                  this.props.chat.link.map((l, i) => {
                     return (
-                      <div><a href={l} target='_blank'>{l}</a></div>
+                      <div key={i}><a href={l} target='_blank'>{l}</a></div>
                     )
                   })
                 }
