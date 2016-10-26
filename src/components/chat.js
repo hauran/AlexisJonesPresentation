@@ -1,27 +1,16 @@
 import React from 'react'
 import smoothScroll from 'smoothscroll'
-
 import classNames from 'classnames'
+import Content from './content'
 import '../less/chat.less'
 
 class Chat extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {typing:true}
+    this.state = {}
   }
 
-  componentDidMount() {
-    if(this.props.chat.aj) {
-      setTimeout(() => {
-        this.setState({typing:false})
-      },1000)
-    }
-    else {
-      this.setState({typing:false})
-    }
-  }
-
-  componentDidUpdate(){
+  scrollToBottom(){
     let avatar = document.querySelectorAll('.avatar')
     smoothScroll(avatar[avatar.length-1])
   }
@@ -30,7 +19,6 @@ class Chat extends React.Component {
     let chatPerson = {}
     let chatStyle = {}
     let avatar = {}
-    let img = {}
     let chatImage = {}
     if(this.props.chat.aj) {
       chatPerson = classNames('chat', 'aj')
@@ -45,48 +33,18 @@ class Chat extends React.Component {
       avatar = classNames('avatar', 'me')
     }
 
-    if(this.props.chat.img) {
-      img = {backgroundImage:`url(${this.props.chat.img})`}
-    }
     return (
       <div className={chatPerson}>
         {
-          this.state.typing ?
-            <div className='typing-indicator'>
-              <span></span>
-              <span></span>
-              <span></span>
+          <div className={chatStyle}>
+            <div className='talktext'>
+              <Content chat={this.props.chat} scrollToBottom={() => this.scrollToBottom()}></Content>
             </div>
-          :
-            <div className={chatStyle}>
-              <div className='talktext'>
-              {
-                this.props.chat.text ?
-                  <p>{this.props.chat.text}</p>
-                :
-                  <p dangerouslySetInnerHTML={this.props.chat}></p>
-              }
-
-                {
-                  this.props.chat.img ?
-                    <div style={img} className='img'></div>
-                  :
-                    null
-                }
-                {
-                  this.props.chat.link.map((l, i) => {
-                    return (
-                      <div key={i}><a href={l} target='_blank'>{l}</a></div>
-                    )
-                  })
-                }
-              </div>
-              <div className={avatar}>
-                <div style={chatImage}></div>
-              </div>
+            <div className={avatar}>
+              <div style={chatImage}></div>
             </div>
+          </div>
         }
-
       </div>
     )
   }
