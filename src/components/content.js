@@ -47,7 +47,7 @@ class Content extends React.Component {
             this.setState({typing:false})
           },1000)
         }
-      },2000)
+      },3000)
     }
   }
 
