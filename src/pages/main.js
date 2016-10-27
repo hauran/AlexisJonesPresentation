@@ -16,7 +16,7 @@ class Main extends React.Component {
   }
 
   handleNextPrev(ev) {
-    if(ev.code === 'Space' || ev.code === 'ArrowRight') {
+    if(ev.code === 'Space' || ev.code === 'ArrowRight' || ev.code === 'Enter') {
       this.next()
     }
   }

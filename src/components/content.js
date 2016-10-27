@@ -1,4 +1,5 @@
 import React from 'react'
+
 import '../less/chat.less'
 
 class Content extends React.Component {
@@ -47,7 +48,7 @@ class Content extends React.Component {
             this.setState({typing:false})
           },1000)
         }
-      },3000)
+      },Math.floor(Math.random() * 3000) + 1500  )
     }
   }
 
@@ -58,7 +59,6 @@ class Content extends React.Component {
         this.state.message.map((m, i) => {
           if(!m.link)
             m.link = []
-          console.log(i, this.state.index);
           return (
             this.state.typing && i === this.state.index-1?
               <div className='typing-indicator' key={i}>
