@@ -1,5 +1,4 @@
 import React from 'react'
-
 import '../less/chat.less'
 
 class Content extends React.Component {

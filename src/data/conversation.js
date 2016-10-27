@@ -40,12 +40,9 @@ module.exports = [
       {text:'2. We are leaving a lot of money on the table in terms of missed calls. Here\'s what I mean:'},
       {
         text:'In 2015, clients wanted to talk to 27,350 experts. GLG only completed 11,334 calls leaving 16,016 missed opportunities.',
-        link:[{
-          url:'https://gist.githubusercontent.com/hauran/2adb21f24eab571fee5cc938eebb25cc/raw/ed93f57a74c7f856d26ed1e17ed95e41b03ef3a4/missed_calls.sql',
-          text:'https://gist.githubusercontent.com/hauran/2b21/raw/ed57/missed_calls.sql'
-        }]
+        link:['https://gist.github.com/hauran/2adb21f24eab571fee5cc938eebb25cc']
       },
-      {__html:'That\'s <b>19 million dollars</b> that clients wanted to give us that we didn\'t get.'}
+      {__html:'That\'s <b>19 million dollars</b> of implied value that clients wanted to give us, but couldn\'t.'}
     ]
   },
   {
@@ -145,7 +142,8 @@ module.exports = [
         text: 'So right now, I am just attaching right? But in the next couple of months I will start auto-inviting, called Inquiries.  I think that\'s when the TPVs will really take off because with these current attaches, the RMs have  to invite the CMs, which is unreliable. With the Inquries, the RMs are out of the picture.',
       },
       {
-        __html: 'I estimate that Inquiries will result in minimum of <b>5,400 TPVs</b> or <b>$6.48 million</b> in estimated value.'
+        __html: 'I estimate that Inquiries will result in minimum of <b>5,400 TPVs</b> or <b>$6.48 million</b> in implied value.',
+        link:['https://gist.github.com/hauran/840ca510019fb8810636c379b7628a1e']
       }
     ]
   }
