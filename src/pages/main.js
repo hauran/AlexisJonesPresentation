@@ -31,7 +31,7 @@ class Main extends React.Component {
     if(!conv[index].aj) {
       setTimeout(()=>{
         this.next()
-      },750)
+      },1000)
     }
     index++
     this.setState({conv:tmp, index})

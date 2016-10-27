@@ -20,7 +20,7 @@ class Content extends React.Component {
     if(this.props.chat.aj) {
       setTimeout(() => {
         this.setState({typing:false})
-      },1000)
+      },1700)
     }
     else {
       this.setState({typing:false})
@@ -56,6 +56,9 @@ class Content extends React.Component {
       <div>
       {
         this.state.message.map((m, i) => {
+          if(!m) {
+            return null
+          }
           if(!m.link)
             m.link = []
           return (
