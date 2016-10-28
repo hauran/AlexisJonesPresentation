@@ -12,7 +12,7 @@ class App extends Component {
       <Router history={browserHistory}>
         <Route path="/" component={Landing}/>
         <Route path="/chat" component={Main}/>
-        <Route path="*" component={Main}/>
+        <Route path="*" component={Landing}/>
       </Router>
     );
   }
