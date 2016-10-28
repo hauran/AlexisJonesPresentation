@@ -70,7 +70,7 @@ class Main extends React.Component {
           let ref = `chat-${i}`
           return (
             <li key={i}>
-              <Chat chat={c} ref={ref} autoadvance={true}></Chat>
+              <Chat chat={c} ref={ref} autoadvance={false}></Chat>
             </li>
           )
         })}
