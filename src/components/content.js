@@ -1,5 +1,6 @@
 import React from 'react'
 import '../less/chat.less'
+import IconArrow from  'react-icons/lib/io/ios-arrow-thin-right'
 
 class Content extends React.Component {
   constructor(props) {
@@ -29,7 +30,10 @@ class Content extends React.Component {
 
   componentDidUpdate(prevProps, prevState){
     if(prevState.typing !== this.state.typing) {
-      this.props.scrollToBottom()
+      setTimeout(()=> {
+        this.props.scrollToBottom()
+      },200)
+
       return
     }
 
@@ -88,9 +92,9 @@ class Content extends React.Component {
                       <div key={i}>
                       {
                       typeof l === 'object' ?
-                        <a href={l.url} target='_blank'>{l.text}</a>
+                        <a href={l.url} target='_blank'>{l.text}<IconArrow className='arrow' size={20}/></a>
                       :
-                        <a href={l} target='_blank'>{l}</a>
+                        <a href={l} target='_blank'><IconArrow className='arrow' size={20}/>{l}</a>
                       }
                       </div>
                     )

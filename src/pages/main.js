@@ -68,6 +68,7 @@ class Main extends React.Component {
           )
         })}
         </ul>
+        <br/><br/>
       </div>
     )
   }

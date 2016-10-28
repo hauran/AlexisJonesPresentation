@@ -139,7 +139,7 @@ module.exports = [
     aj:true,
     message:[
       {
-        text: 'So right now, I am just attaching right? But in the next couple of months I will start auto-inviting, called Inquiries.  I think that\'s when the TPVs will really take off because with these current attaches, the RMs have  to invite the CMs, which is unreliable. With the Inquries, the RMs are out of the picture.',
+        text: 'So right now, I am just attaching right? But in the next couple of months I will start sending auto-invites, called Inquiries.  I think that\'s when the TPVs will really take off because with these current attaches, the RMs have  to invite the CMs, which is unreliable. With the Inquries, the RMs are out of the picture.',
       },
       {
         __html: 'I estimate that Inquiries will result in minimum of <b>5,400 TPVs</b> or <b>$6.48 million</b> in implied value.',

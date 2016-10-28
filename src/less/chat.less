@@ -5,6 +5,7 @@
   width:100%;
   color:white;
   opacity: 0;
+  font-weight: 300;
   .transform(translateY(15px));
   .transition();
   &.show{
@@ -35,7 +36,7 @@
     position: relative;
     max-width: 75%;
   	height: auto;
-
+    border-radius: 3px;
   }
 
   .tri-right.btm-left:after{
@@ -113,5 +114,9 @@
     height: 250px;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  .arrow {
+    .transform(rotate(-45deg));
   }
 }
