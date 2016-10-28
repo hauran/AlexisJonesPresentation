@@ -11,14 +11,20 @@ class Main extends React.Component {
     this.state = {
       index:0,
       conv:[],
-      start:0
+      start:6
     }
   }
 
   handleNextPrev(ev) {
     if(ev.code === 'Space' || ev.code === 'ArrowRight' || ev.code === 'Enter') {
-      this.next()
+      if(!this.checkMoreMessages())
+        this.next()
     }
+  }
+
+  checkMoreMessages(){
+    let lastChat = `chat-${this.state.index-1}`
+    return this.refs[lastChat].checkMoreMessages()
   }
 
   next(){
@@ -61,9 +67,10 @@ class Main extends React.Component {
       <div id='main' className='page'>
         <ul>
         {this.state.conv.map((c,i) => {
+          let ref = `chat-${i}`
           return (
             <li key={i}>
-              <Chat chat={c}></Chat>
+              <Chat chat={c} ref={ref} autoadvance={true}></Chat>
             </li>
           )
         })}

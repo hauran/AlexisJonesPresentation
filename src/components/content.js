@@ -21,7 +21,7 @@ class Content extends React.Component {
     if(this.props.chat.aj) {
       setTimeout(() => {
         this.setState({typing:false})
-      },1700)
+      },Math.floor(Math.random() * 1200) + 700)
     }
     else {
       this.setState({typing:false})
@@ -29,7 +29,7 @@ class Content extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState){
-    if(prevState.typing !== this.state.typing) {
+    if(prevState.typing !== this.state.typing || prevState.index !== this.state.index ) {
       setTimeout(()=> {
         this.props.scrollToBottom()
       },200)
@@ -38,22 +38,40 @@ class Content extends React.Component {
     }
 
     this.props.scrollToBottom()
+    if(this.props.autoadvance)
+      this.next()
+  }
+
+
+  next() {
     if(this.props.chat.message.length > this.state.message.length){
+      let delay = 0
+      let typingTime = 700
+      if(this.props.autoadvance) {
+        delay = Math.floor(Math.random() * 1700) + 1200
+        typingTime = Math.floor(Math.random() * 1200) + 500
+      }
+
       setTimeout(()=>{
         let message = this.state.message
         let index = this.state.index
         message.push(this.props.chat.message[this.state.index])
         ++index
-        this.setState({message,index})
+        this.setState({index})
         if(this.props.chat.aj) {
           this.setState({typing:true})
           setTimeout(() => {
             this.setState({typing:false})
-          },1000)
+          }, typingTime)
         }
-      },Math.floor(Math.random() * 3000) + 1500  )
+        this.setState({message})
+      }, delay)
+      return true
     }
+    else
+      return false
   }
+
 
   render() {
     return (

@@ -23,6 +23,10 @@ class Chat extends React.Component {
     smoothScroll(avatar[avatar.length-1])
   }
 
+  checkMoreMessages() {
+    return this.refs.content.next()
+  }
+
   render() {
     let chatPerson = {}
     let chatStyle = {}
@@ -46,7 +50,7 @@ class Chat extends React.Component {
         {
           <div className={chatStyle}>
             <div className='talktext'>
-              <Content chat={this.props.chat} scrollToBottom={() => this.scrollToBottom()}></Content>
+              <Content chat={this.props.chat} scrollToBottom={() => this.scrollToBottom()} ref='content' autoadvance={this.props.autoadvance}></Content>
             </div>
             <div className={avatar}>
               <div style={chatImage}></div>
